@@ -1,9 +1,9 @@
 #!/bin/sh
 x=0
-echo "数字を入力してください"
+echo "整数を入力してください"
 read inRead
-if [ $inRead ] ; then
-	while [ $x -ne $inRead ]
+if [ `expr "$inRead" + 0` ] ; then
+	while [ $x -lt $inRead ]
 	do
 		x=`expr $x + 1`
 		flag=0
